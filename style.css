@@ -4,6 +4,17 @@ body {
     padding-right: 35px;
 }
 
+#title {
+    /* font-family: gastromond, sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+font-weight: 400;
+font-style: normal;
+    font-size: 25pt;
+    margin: 0;
+}
+
 .project-link-container {
     display: flex;
     flex-direction: column;
@@ -11,12 +22,15 @@ body {
 }
 
 .project-link {
-    font-family: bilo, sans-serif;
+    /* font-family: bilo, sans-serif;
     font-weight: 300;
-    font-style: normal;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+font-weight: 300;
+font-style: normal;
     font-size: 45pt;
     margin-left: 85pt;
-    margin-bottom: 15pt;
+    margin-bottom: 20pt;
     flex-grow: 0;
 }
 
@@ -42,13 +56,26 @@ a:active {
 }
 
 .project-page-text {
-    font-family: bilo, sans-serif;
+    /* font-family: bilo, sans-serif;
     font-weight: 300;
-    font-style: normal;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+font-weight: 300;
+font-style: normal;
     margin-bottom: 15pt;
     color: #556971;
     padding-left: 60px;
+    margin-bottom: 60pt;
     font-size: 35pt;
+}
+
+.project-page-content {
+    font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #556971;
+    font-size: 15pt;
+    margin-top: 40px;
 }
 
 .landing-page-placeholder {
@@ -74,9 +101,14 @@ a:active {
 }
 
 .about-page-text {
-    font-size: 15pt;
+    font-size: 18pt;
     color: #556971;
     padding-left: 500px;
+    /* font-family: bilo, sans-serif;
+    font-weight: 300; */
+    font-family: "como", sans-serif;
+font-weight: 300;
+font-style: normal;
 }
 
 #business-card1 {
@@ -93,7 +125,6 @@ a:active {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 60pt;
     margin-left: auto;
     margin-right: auto;
     gap: 40px;
@@ -102,7 +133,23 @@ a:active {
 }
 
 .grid-container * {
-    height: 400px;
+    width: 400px;
+}
+
+.grid-container-one-column {
+    display: flex;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+    max-width: 840px;
+    justify-content: center ;
+}
+
+.grid-container-one-column * {
+    width: 840px;
 }
 
 /* relevant styles */
@@ -138,10 +185,14 @@ a:active {
   .img__description {
     transition: .2s;
     transform: translateY(1em);
-    font-family: gastromond, sans-serif;
+    /* font-family: gastromond, sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 32pt;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+font-weight: 400;
+font-style: normal;
+    /* font-size: 32pt; */
+    font-size: 40pt;
     text-align: center;
     line-height: 98%;
     height: fit-content;
@@ -149,4 +200,28 @@ a:active {
   
   .img__wrap:hover .img__description {
     transform: translateY(0);
+  }
+
+  ::-webkit-scrollbar {
+    width: 28px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 28px;
+    background-color: lightgray;
+    border: solid 10px transparent;
+    background-clip: padding-box;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #556971; 
+    border-radius: 28px;
+    border: solid 10px transparent;
+    background-clip: padding-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+    border: solid 10px transparent;
+    background-clip: padding-box;
   }
