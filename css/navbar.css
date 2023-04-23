@@ -6,8 +6,8 @@
 
 #title {
   display: inline-block;
-  font-family: "bilo", sans-serif;
-  font-weight: 300;
+  font-family: "como", sans-serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 25pt;
   margin: 0 0 0 25px;
@@ -24,11 +24,11 @@
 
 .nav-link {
   display: inline-block;
-  font-family: "bilo", sans-serif;
-  font-weight: 300;
+  font-family: "como", sans-serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 25pt;
-  margin: 0 0 0 25px;
+  margin: 0 25px 0 0;
 
   transition: all .8s ease-in-out;
   -moz-transition: all .8s ease-in-out;
@@ -44,20 +44,13 @@
 .hidden {
   width: 0px;
   opacity: 0;
-  /* transform: scaleX(0); */
 }
-
-/* @keyframes fade {
-  50% {
-    display: none;
-  }
-} */
 
 .nav-icon {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  top: 4px;
+  top: 2px;
   width: 1.5em;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
