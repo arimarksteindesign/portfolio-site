@@ -1,0 +1,99 @@
+#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#title {
+  display: inline-block;
+  font-family: "bilo", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25pt;
+  margin: 0 0 0 25px;
+
+  transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  -webkit-transition: all .8s ease-in-out;
+  transform-origin: bottom left;
+
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-link {
+  display: inline-block;
+  font-family: "bilo", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25pt;
+  margin: 0 0 0 25px;
+
+  transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  -webkit-transition: all .8s ease-in-out;
+
+  transform-origin: bottom left;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+
+.hidden {
+  width: 0px;
+  opacity: 0;
+  /* transform: scaleX(0); */
+}
+
+/* @keyframes fade {
+  50% {
+    display: none;
+  }
+} */
+
+.nav-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  width: 1.5em;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon span {
+  margin: 4px auto;
+  display: block;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  content: '';
+  height: 2px;
+  width: 1.5em;
+  background-color: #556971;
+}
+
+.nav-icon.nav-icon--open:before {
+  width: 1em;
+  transform: translateY(6px) rotate(135deg);
+  -webkit-transform: translateY(6px) rotate(135deg);
+  -moz-transform: translateY(6px) rotate(135deg);
+}
+
+.nav-icon.nav-icon--open:after {
+  width: 1em;
+  transform: translateY(-6px) rotate(-135deg);
+  -moz-transform: translateY(-6px) rotate(-135deg);
+  -webkit-transform: translateY(-6px) rotate(-135deg);
+}
+
+.nav-icon.nav-icon--open span {
+  transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+}
