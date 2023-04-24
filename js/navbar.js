@@ -9,7 +9,6 @@ let aboutLink;
 let contactLink;
 
 function renderNavbar() {
-  let navBarItems = [];
   if (isNavbarExpanded) {
     navbarIcon.className = 'nav-icon nav-icon--open';
     title.classList.add('hidden');
