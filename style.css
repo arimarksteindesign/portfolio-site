@@ -70,11 +70,14 @@ font-style: normal;
 }
 
 .project-page-content {
-    font-family: bilo, sans-serif;
+    /* font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+    font-family: "como", sans-serif;
     font-weight: 300;
     font-style: normal;
     color: #556971;
-    font-size: 15pt;
+    font-size: 14.25pt;
     margin-top: 40px;
 }
 
@@ -225,3 +228,17 @@ font-style: normal;
     border: solid 10px transparent;
     background-clip: padding-box;
   }
+
+  .contactlinks {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 70px;
+    
+
+}
