@@ -1,244 +1,358 @@
-body {
-    padding-left: 35px;
-    padding-top: 15px;
-    padding-right: 35px;
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }
 
-#title {
-    /* font-family: gastromond, sans-serif;
-    font-weight: 300;
-    font-style: normal; */
-    font-family: "como", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25pt;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  color: white;
 }
 
-.project-link-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+
+/* ----- common fonts, colors, and styles ----- */
+
+.bg-black {
+  background-color: black;
 }
 
-.project-link {
-    /* font-family: bilo, sans-serif;
-    font-weight: 300;
-    font-style: normal; */
-    font-family: "como", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 45pt;
-    margin-left: 85pt;
-    margin-bottom: 20pt;
-    flex-grow: 0;
+.bg-yellow {
+  background-color: #fec31d;
 }
 
+.text-white {
+  color: white !important;
+}
+
+.text-blue {
+  color: #008aa6 !important;
+}
+
+.text-pink {
+  color: #ea0b7e !important;
+}
+
+.text-yellow {
+  color: #fec31d !important;
+}
+
+.title-font {
+  font-family: "gabriella", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  /* line-height: 1.62rem; */
+}
+
+.title-font.tight {
+  line-height: .635;
+}
+
+.flush {
+  margin-bottom: -.25rem;
+}
+
+.copy-font {
+  font-family: "como", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  letter-spacing: .075rem;
+  line-height: 1.35rem;
+}
+
+.copy-font.bold {
+  font-weight: 700;
+}
+
+.page-title {
+  margin: 3rem 0;
+}
 
 a:link {
-    color: #556971;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:visited {
-    color: #556971;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #9db8b1;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:active {
-    color: #556971;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-.project-page-text {
-    /* font-family: bilo, sans-serif;
-    font-weight: 300;
-    font-style: normal; */
-    font-family: "como", sans-serif;
-font-weight: 300;
-font-style: normal;
-    margin-bottom: 15pt;
-    color: #556971;
-    padding-left: 60px;
-    margin-bottom: 60pt;
-    font-size: 35pt;
+.button-area {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.project-page-content {
-    /* font-family: bilo, sans-serif;
-    font-weight: 300;
-    font-style: normal; */
-    font-family: "como", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: #556971;
-    font-size: 14.25pt;
-    margin-top: 40px;
+.button {
+  font-size: 1.25rem;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  border: 1px solid #fec31d;
+  border-radius: .25rem;
 }
 
-.landing-page-placeholder {
-    height: 60pt;
+.button-label {
+  text-align: center;
+  line-height: normal;
+  font-size: 1.25rem;
+  margin: auto .5rem;
 }
 
-.decoration {
-    background-image: url("./img/web_decoration.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -5;
+
+/* ----- utility classes ----- */
+
+.center {
+  text-align: center;
 }
 
-#me {
-    padding-left: 65px;
-    float: left;
+.spacer-xs {
+  width: 100%;
+  height: 1rem;
 }
 
-.about-page-text {
-    font-size: 18pt;
-    color: #556971;
-    padding-left: 500px;
-    /* font-family: bilo, sans-serif;
-    font-weight: 300; */
-    font-family: "como", sans-serif;
-font-weight: 300;
-font-style: normal;
+.spacer-sm {
+  width: 100%;
+  height: 3rem;
 }
 
-#business-card1 {
-    padding-left: 65px;
-    float: left;
+.spacer, .spacer-md {
+  width: 100%;
+  height: 6rem;
 }
 
-#business-card2 {
-    float: right;
-    padding-right: 100px;
+.relative {
+  position: relative;
+  /* top: 0;
+  left: 0; */
 }
 
-.grid-container {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 40px;
-    max-width: 840px;
-    justify-content: center ;
+.mb-xs {
+  margin-bottom: .5rem;
 }
 
-.grid-container * {
-    width: 400px;
+.mb-sm {
+  margin-bottom: 1.5rem;
 }
 
-.grid-container-one-column {
-    display: flex;
-    align-items: flex-start;
-    /* flex-wrap: wrap; */
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 40px;
-    max-width: 840px;
-    justify-content: center ;
+
+/* ----- landing page styles ----- */
+
+.virtual-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
-.grid-container-one-column * {
-    width: 840px;
+.main-heading {
+  font-size: 6rem;
+  /* line-height: 3.8rem; */
 }
 
-/* relevant styles */
-.img__wrap {
-    position: relative;
-    height: 400px;
-    width: 400px;
-  }
-  
-  .img__description_layer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #556971dd;
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
-  }
-  
-  .img__wrap:hover .img__description_layer {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .img__description {
-    transition: .2s;
-    transform: translateY(1em);
-    /* font-family: gastromond, sans-serif;
-    font-weight: 400;
-    font-style: normal; */
-    font-family: "como", sans-serif;
-font-weight: 400;
-font-style: normal;
-    /* font-size: 32pt; */
-    font-size: 40pt;
-    text-align: center;
-    line-height: 98%;
-    height: fit-content;
-  }
-  
-  .img__wrap:hover .img__description {
-    transform: translateY(0);
-  }
+.view-work-button-area {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+}
 
-  ::-webkit-scrollbar {
-    width: 28px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    border-radius: 28px;
-    background-color: lightgray;
-    border: solid 10px transparent;
-    background-clip: padding-box;
-  }
-   
-  ::-webkit-scrollbar-thumb {
-    background: #556971; 
-    border-radius: 28px;
-    border: solid 10px transparent;
-    background-clip: padding-box;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #aaa; 
-    border: solid 10px transparent;
-    background-clip: padding-box;
-  }
+/* see https://webcode.tools/css-generator/keyframe-animation */
+.animate-bounce {
+  animation: Bounce 1s ease 0s infinite normal forwards;
+}
+.animate-bounce-alt {
+  animation: BounceAlt 1s ease 0s infinite normal forwards;
+}
+@keyframes Bounce {
+	0%,
+	100% {
+		transform: translateY(8px);
+	}
 
-  .contactlinks {
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 70px;
-    
+	50% {
+		transform: translateY(-8px);
+	}
+}
+@keyframes BounceAlt {
+	0%,
+	100% {
+		transform: translateY(-8px);
+	}
 
+	50% {
+		transform: translateY(8px);
+	}
+}
+
+.project-link-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.project-link {
+  text-align: center;
+}
+
+.decoration-yellow-line {
+  background-color: #fec31d;
+  width: 100%;
+  height: 1.5rem;
+  position: absolute;
+}
+
+.decoration-pink-arrow {
+  /* center on page */
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  /* see CSS tricks: https://css-tricks.com/snippets/css/css-triangle/ */
+  width: 0;
+  height: 0;
+  border-left: 1.25rem solid transparent;
+  border-right: 1.25rem solid transparent;
+  border-bottom: 2rem solid #ea0b7e;
+}
+
+
+/* ----- contact page styles ----- */
+
+.contact-page-title {
+  margin-top: 2rem;
+}
+
+.contact-page-subtitle {
+  font-size: 1.5rem;
+}
+
+.contact-page-description {
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+}
+
+.ari-photo-area {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* padding: 0 1rem; */
+}
+
+.ari-photo {
+  margin-left: 1rem;
+  width: 50%;
+  z-index: 10;
+}
+
+
+/* ----- logo page styles ----- */
+
+.logo-responsive-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 0 6rem;
+  gap: 2rem;
+}
+
+.logo-responsive-body > a > img {
+  width: 100%;
+}
+
+
+/* ----- product page styles ----- */
+
+.product-responsive-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  /* padding: 0 6rem; */
+  gap: 2rem;
+}
+
+.product-responsive-body > a > img {
+  width: 100%;
+}
+
+
+/* ----- menu page styles ----- */
+
+.menu-responsive-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  /* padding: 0 6rem; */
+  gap: 2rem;
+}
+
+.menu-responsive-body > img {
+  width: 100%;
+}
+
+
+/* ----- detail page styles ----- */
+
+.detail-responsive-body {
+  margin-top: 3rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.detail-text-block {
+  padding: 3rem;
+}
+
+.back-footer {
+  font-size: 1.25rem;
+  padding: 2rem 1rem;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.back-footer > * {
+  margin: auto 0;
+}
+
+.back-footer > .arrow {
+  display: inline-block;
+  /* see CSS tricks: https://css-tricks.com/snippets/css/css-triangle/ */
+  width: 0;
+  height: 0;
+  border-top: .8rem solid transparent;
+  border-bottom: .8rem solid transparent;
+  border-right: 1.36rem solid #ea0b7e;
+  margin-right: .75rem;
 }

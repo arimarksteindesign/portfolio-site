@@ -7,22 +7,83 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ari markstein design</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nif6qzp.css">
+    <link rel="stylesheet" href="https://use.typekit.net/uov5qde.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 
 <body>
     <div id="navbar"></div>
-    <div class="landing-page-placeholder"></div>
-    <div class="project-link-container">
-        <a href="logo_design.html" class="project-link">logo design</a>
-        <a href="product_design.html" class="project-link">product design</a>
-        <a href="bubble.html" class="project-link">app design</a>
-        <a href="photography.html" class="project-link">photography</a>
+    <div id="page-1" class="virtual-page bg-black relative">
+        <div>
+            <div class="main-heading title-font tight center">
+                <span class="text-blue">
+                    Hey,<br />
+                    I'm<br />
+                </span>
+                <span class="text-pink">
+                    Ari
+                </span>
+            </div>
+            <div class="copy-font text-white center" style="margin-top: 1rem;">
+                philadelphia based graphic<br />
+                designer experienced in branding,<br />
+                web design, and digital design
+            </div>
+        </div>
+
+        <div onclick="scrollToProjects({ isSmooth: true })" class="title-font view-work-button-area">
+            <div class="button">
+                <div class="text-yellow animate-bounce">&#8595;</div>
+                <div class="text-yellow button-label" style="position: relative; top: .5rem;">
+                    view my work
+                </div>
+                <div class="text-yellow animate-bounce-alt">&#8595;</div>
+            </div>
+        </div>
+        <!-- <div class="decoration-yellow-line" style="bottom: 6rem; left: 0;"></div> -->
     </div>
-    <div class="decoration"> </div>
+
+    <div id="page-2" class="virtual-page bg-yellow relative">
+        <div class="spacer-md"></div>
+        <div class="project-link-container title-font tight">
+            <a href="logo_design.html" class="project-link">
+                <span class="text-blue">logo</span><br />
+                <span class="text-pink">design</span>
+            </a>
+            <a href="product_design.html" class="project-link">
+                <span class="text-blue">product</span><br />
+                <span class="text-pink">design</span>
+            </a>
+            <!-- <a href="other_projects.html" class="project-link">
+                <span class="text-blue">other</span><br />
+                <span class="text-pink">projects</span>
+            </a> -->
+        </div>
+        <div class="decoration-pink-arrow" style="top: 2rem;"></div>
+        <div class="decoration-pink-arrow" style="top: 3.5rem;"></div>
+    </div>
 
     <script src="js/navbar.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function scrollToProjects({ isSmooth } = {}) {
+            console.log('about to scroll to projects!'); // TODO remove
+            const page2 = document.getElementById('page-2');
+            page2.scrollIntoView({ 
+                ...(isSmooth && { behavior: 'smooth' }),
+            });
+        }
+
+        function scrollToProjectsOnLoadIfNeeded() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const shouldScrollToProjects = urlParams.get('projects') === '';
+            if (shouldScrollToProjects) {
+                scrollToProjects();
+            }
+        }
+
+        scrollToProjectsOnLoadIfNeeded();
+    </script>
 </body>
 
 </html>

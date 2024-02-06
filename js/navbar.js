@@ -2,29 +2,15 @@
 
 let isNavbarExpanded = false;
 let navbarIcon;
-let navbarItemArea;
-let title;
-let projectsLink;
-let aboutLink;
-let contactLink;
+let navMenu;
 
 function renderNavbar() {
   if (isNavbarExpanded) {
     navbarIcon.className = 'nav-icon nav-icon--open';
-    title.classList.add('hidden');
-    [
-      projectsLink,
-      aboutLink,
-      contactLink
-    ].forEach((el) => el.classList.remove('hidden'));
+    navMenu.classList.add('open');
   } else {
     navbarIcon.className = 'nav-icon';
-    title.classList.remove('hidden');
-    [
-      projectsLink,
-      aboutLink,
-      contactLink
-    ].forEach((el) => el.classList.add('hidden'));
+    navMenu.classList.remove('open');
   }
 }
 
@@ -33,37 +19,52 @@ function toggleNavbar() {
   renderNavbar();
 }
 
-function createNavLink(text, href) {
-  const navLink = document.createElement('a');
-  navLink.href = href;
-  navLink.className = 'nav-link hidden';
-  navLink.innerHTML = text;
-  return navLink;
-}
-
 function initNavbar() {
+  // create social buttons
+  const socialButtonContainer = document.createElement('div');
+  socialButtonContainer.className = 'social-button-container';
+
+  const instagramButtom = document.createElement('a');
+  instagramButtom.className = 'social-button';
+  instagramButtom.href = 'https://www.instagram.com/arimarksteindesign/';
+  instagramButtom.innerHTML = '<img src="img/contact/ig.png" />';
+
+  const linkedInButton = document.createElement('a');
+  linkedInButton.className = 'social-button';
+  linkedInButton.href = 'https://www.linkedin.com/in/arimarkstein';
+  linkedInButton.innerHTML = '<img src="img/contact/li.png" />';
+
+  socialButtonContainer.appendChild(instagramButtom);
+  socialButtonContainer.appendChild(linkedInButton);
+
+  // create menu button
   navbarIcon = document.createElement('div');
   navbarIcon.className = 'nav-icon';
   navbarIcon.innerHTML = '<span></span>';
   navbarIcon.addEventListener('click', toggleNavbar);
 
-  navbarItemArea = document.createElement('div');
-  navbarItemArea.className = 'nav-item-container';
+  // create menu
+  navMenu = document.createElement('div');
+  navMenu.className = 'nav-menu animate bg-black';
+  navMenu.innerHTML = `
+    <div class="nav-link-container">
+      <a href="about.html" class="title-font">About</a>
+      <a href="index.html?projects" class="title-font">Projects</a>
+      <a href="contact.html" class="title-font">Contact</a>
+    </div>
+  `;
 
-  title = document.createElement('h3');
-  title.id = 'title';
-  title.innerHTML = '<a href="index.html">ari markstein design</a>';
-
-  projectsLink = createNavLink('projects', 'index.html');
-  aboutLink = createNavLink('about', 'about.html');
-  contactLink = createNavLink('contact', 'contact.html');
-
-  [title, projectsLink, aboutLink, contactLink].forEach((el) => navbarItemArea.appendChild(el));
-
+  // compose navbar
+  const navHeader = document.createElement('div');
+  navHeader.className = 'nav-header';
+  navHeader.appendChild(socialButtonContainer);
+  navHeader.appendChild(navbarIcon);
+  
   const targetElementId = 'navbar';
   const navbar = document.getElementById(targetElementId);
-  navbar.appendChild(navbarIcon);
-  navbar.appendChild(navbarItemArea);
+  navbar.appendChild(navHeader);
+  navbar.appendChild(navMenu);
+
 
   renderNavbar();
 }

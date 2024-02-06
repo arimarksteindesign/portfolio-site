@@ -1,0 +1,244 @@
+body {
+    padding-left: 35px;
+    padding-top: 15px;
+    padding-right: 35px;
+}
+
+#title {
+    /* font-family: gastromond, sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25pt;
+    margin: 0;
+}
+
+.project-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-link {
+    /* font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 45pt;
+    margin-left: 85pt;
+    margin-bottom: 20pt;
+    flex-grow: 0;
+}
+
+
+a:link {
+    color: #556971;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #556971;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9db8b1;
+    text-decoration: none;
+}
+
+a:active {
+    color: #556971;
+    text-decoration: none;
+}
+
+.project-page-text {
+    /* font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+font-weight: 300;
+font-style: normal;
+    margin-bottom: 15pt;
+    color: #556971;
+    padding-left: 60px;
+    margin-bottom: 60pt;
+    font-size: 35pt;
+}
+
+.project-page-content {
+    /* font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #556971;
+    font-size: 14.25pt;
+    margin-top: 40px;
+}
+
+.landing-page-placeholder {
+    height: 60pt;
+}
+
+.decoration {
+    background-image: url("./img/web_decoration.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+}
+
+#me {
+    padding-left: 65px;
+    float: left;
+}
+
+.about-page-text {
+    font-size: 18pt;
+    color: #556971;
+    padding-left: 500px;
+    /* font-family: bilo, sans-serif;
+    font-weight: 300; */
+    font-family: "como", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+#business-card1 {
+    padding-left: 65px;
+    float: left;
+}
+
+#business-card2 {
+    float: right;
+    padding-right: 100px;
+}
+
+.grid-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+    max-width: 840px;
+    justify-content: center ;
+}
+
+.grid-container * {
+    width: 400px;
+}
+
+.grid-container-one-column {
+    display: flex;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+    max-width: 840px;
+    justify-content: center ;
+}
+
+.grid-container-one-column * {
+    width: 840px;
+}
+
+/* relevant styles */
+.img__wrap {
+    position: relative;
+    height: 400px;
+    width: 400px;
+  }
+  
+  .img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #556971dd;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+    /* font-family: gastromond, sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "como", sans-serif;
+font-weight: 400;
+font-style: normal;
+    /* font-size: 32pt; */
+    font-size: 40pt;
+    text-align: center;
+    line-height: 98%;
+    height: fit-content;
+  }
+  
+  .img__wrap:hover .img__description {
+    transform: translateY(0);
+  }
+
+  ::-webkit-scrollbar {
+    width: 28px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 28px;
+    background-color: lightgray;
+    border: solid 10px transparent;
+    background-clip: padding-box;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #556971; 
+    border-radius: 28px;
+    border: solid 10px transparent;
+    background-clip: padding-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+    border: solid 10px transparent;
+    background-clip: padding-box;
+  }
+
+  .contactlinks {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 70px;
+    
+
+}

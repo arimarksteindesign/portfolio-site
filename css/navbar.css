@@ -1,57 +1,88 @@
+/* the navbar also uses styles from `style.css` */
+
 #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* convenience style for page bodies */
+.nav-header-spacer {
+  width: 100%;
+  height: 6rem;
+}
+
+.nav-header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  background: black;
+  /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); */
+  /* box-shadow: 0 .5rem .5rem #00000066; */
 }
 
-#title {
-  display: inline-block;
-  font-family: "como", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 25pt;
-  margin: 0 0 0 25px;
+.social-button-container {
+  padding-left: 2rem;
+  display: flex;
+  column-gap: 1.5rem;
+}
 
-  transition: all .8s ease-in-out;
-  -moz-transition: all .8s ease-in-out;
-  -webkit-transition: all .8s ease-in-out;
-  transform-origin: bottom left;
+.social-button, .social-button > img {
+  width: 2.5rem;
+}
 
-  text-overflow: clip;
+.social-button > img {
+  position: relative;
+  /* not sure why they're not vertically centered */
+  top: 2px; 
+}
+
+.animate {
+  transition: all .45s ease-out;
+  -moz-transition: all .45s ease-out;
+  -webkit-transition: all .45s ease-out;
+}
+
+.nav-menu {
   overflow: hidden;
-  white-space: nowrap;
+  /* hidden by default */
+  height: 0;
 }
 
-.nav-link {
-  display: inline-block;
-  font-family: "como", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 25pt;
-  margin: 0 25px 0 0;
+.nav-menu.open {
+  /* subtract the height of the nav-header */
+  height: calc(100vh - 6rem);
+}
 
-  transition: all .8s ease-in-out;
-  -moz-transition: all .8s ease-in-out;
-  -webkit-transition: all .8s ease-in-out;
-  transform-origin: bottom left;
-
-  text-overflow: clip;
+.nav-link-container {
+  /* height: 100vh; */
+  /* again, subtract the height of the nav-header to v-center the elements */
+  height: calc(100% - 6rem);
+  display: flex;
   overflow: hidden;
-  white-space: nowrap;
-
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 6rem;
+  color: white;
+  /* margin-bottom: 6rem; */
 }
 
-.hidden {
-  width: 0px;
-  opacity: 0;
+.nav-link-container > a {
+  text-align: center;
+  color: #fec31d;
 }
 
 .nav-icon {
   cursor: pointer;
   display: inline-block;
-  position: relative;
-  top: 2px;
-  width: 1.5em;
+  margin-right: 1.75rem;
+  /* position: relative;
+  top: 2px; */
+  width: 3rem;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -60,29 +91,29 @@
 .nav-icon:after,
 .nav-icon:before,
 .nav-icon span {
-  margin: 4px auto;
+  margin: .5rem auto;
   display: block;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
   content: '';
-  height: 2px;
-  width: 1.5em;
-  background-color: #556971;
+  height: .5rem;
+  width: 3rem;
+  background-color: #fec31d;
 }
 
 .nav-icon.nav-icon--open:before {
-  width: 1em;
-  transform: translateY(6px) rotate(135deg);
-  -webkit-transform: translateY(6px) rotate(135deg);
-  -moz-transform: translateY(6px) rotate(135deg);
+  width: 3rem;
+  transform: translateY(1rem) rotate(135deg);
+  -webkit-transform: translateY(1rem) rotate(135deg);
+  -moz-transform: translateY(1rem) rotate(135deg);
 }
 
 .nav-icon.nav-icon--open:after {
-  width: 1em;
-  transform: translateY(-6px) rotate(-135deg);
-  -moz-transform: translateY(-6px) rotate(-135deg);
-  -webkit-transform: translateY(-6px) rotate(-135deg);
+  width: 3rem;
+  transform: translateY(-1rem) rotate(-135deg);
+  -moz-transform: translateY(-1rem) rotate(-135deg);
+  -webkit-transform: translateY(-1rem) rotate(-135deg);
 }
 
 .nav-icon.nav-icon--open span {
