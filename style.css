@@ -1,9 +1,13 @@
 html, body {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
   background-color: black;
+}
+
+body {
+  height: 100vh;
+  /* don't use `100vw` because it doesn't take the width of the scrollbar into account! */
+  width: 100%;
 }
 
 * {
@@ -106,16 +110,18 @@ a:active {
   padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: row;
-  align-content: flex-end;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #fec31d;
   border-radius: .25rem;
 }
 
 .button-label {
   text-align: center;
-  line-height: normal;
+  line-height: 100%;
+  vertical-align: middle;
   font-size: 1.25rem;
-  margin: auto .5rem;
+  margin: 0 .5rem;
 }
 
 
@@ -159,6 +165,7 @@ a:active {
 
 .virtual-page {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -335,7 +342,6 @@ a:active {
 .back-footer {
   font-size: 1.25rem;
   padding: 2rem 1rem;
-  /* text-align: center; */
   display: flex;
   flex-direction: row;
   justify-content: center;
