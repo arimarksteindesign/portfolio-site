@@ -1,84 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ari markstein design</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/uov5qde.css">
-    <link rel="stylesheet" href="css/navbar.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/uov5qde.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
 
-<body>
+  <body>
     <div id="navbar"></div>
-    <div id="page-1" class="virtual-page bg-black relative">
-        <div>
-            <div class="main-heading title-font tight center">
-                <span class="text-blue">
-                    Hey,<br />
-                    I'm<br />
-                </span>
-                <span class="text-pink">
-                    Ari
-                </span>
-            </div>
-            <div class="copy-font text-white center" style="margin-top: 1rem;">
-                philadelphia based graphic<br />
-                designer experienced in branding,<br />
-                web design, and digital design
-            </div>
+    <div class="virtual-page bg-black relative">
+      <div>
+        <div class="main-heading title-font tight center">
+          <span class="text-blue">
+            Hey,<br />
+            I'm<br />
+          </span>
+          <span class="text-pink"> Ari </span>
         </div>
+        <div class="copy-font text-white center" style="margin-top: 1rem">
+          philadelphia based graphic<br />
+          designer experienced in branding,<br />
+          web design, and digital design
+        </div>
+      </div>
 
-        <div onclick="scrollToProjects({ isSmooth: true })" class="title-font view-work-button-area">
-            <div class="button">
-                <div class="text-yellow animate-bounce">&#8595;</div>
-                <div class="text-yellow button-label" style="position: relative; top: .15rem;">
-                    view my work
-                </div>
-                <div class="text-yellow animate-bounce-alt">&#8595;</div>
-            </div>
+      <div
+        onclick="scrollToHeading('logos', { isSmooth: true })"
+        class="title-font view-work-button-area"
+      >
+        <div class="button">
+          <div class="text-yellow animate-bounce">&#8595;</div>
+          <div
+            class="text-yellow button-label"
+            style="position: relative; top: 0.15rem"
+          >
+            view my work
+          </div>
+          <div class="text-yellow animate-bounce-alt">&#8595;</div>
         </div>
+      </div>
     </div>
 
-    <div id="page-2" class="virtual-page bg-yellow relative">
-        <div class="spacer-md"></div>
-        <div class="project-link-container title-font tight">
-            <a href="logo_design.html" class="project-link">
-                <span class="text-blue">logo</span><br />
-                <span class="text-pink">design</span>
-            </a>
-            <a href="product_design.html" class="project-link">
-                <span class="text-blue">product</span><br />
-                <span class="text-pink">design</span>
-            </a>
-        </div>
-        <div class="decoration-pink-arrow" style="top: 2rem;"></div>
-        <div class="decoration-pink-arrow" style="top: 3.5rem;"></div>
+    <div class="nav-header-spacer"></div>
+
+    <div id="heading-logos" class="header-title title-font tight text-white center">Logos</div>
+    <div class="logo-responsive-body">
+      <a href="mjl.html">
+        <img src="img/mjl/mjl3.jpg" />
+      </a>
+      <a href="somnum.html">
+        <img src="img/somnum/somnum1.jpg" />
+      </a>
+      <a href="tdc.html">
+        <img src="img/tdc/tdcbwpng-29 2.jpg" />
+      </a>
+      <a href="emmett.html">
+        <img src="img/emmett/emmett3.jpg" />
+      </a>
+      <a href="pb.html">
+        <img src="img/pb/pbprblackwhite-01.jpg" />
+      </a>
+      <a href="carlas.html">
+        <img src="img/carla/carla_logo2.jpg" />
+      </a>
     </div>
+    <div class="spacer-md"></div>
+    <div
+      class="decoration-yellow-line"
+      style="position: relative; top: -2rem"
+    ></div>
+
+    <div id="heading-menus" class="header-title title-font tight text-white center">Menus</div>
+    <div class="logo-responsive-body">
+      <a href="menu_design.html">
+        <img src="img/menu_thumbnails/ogawa_thumbnail.jpg" />
+      </a>
+      <a href="menu_design.html">
+        <img src="img/menu_thumbnails/mawn_thumbnail.jpg" />
+      </a>
+      <a href="menu_design.html">
+        <img src="img/menu_thumbnails/emmett_thumbnail.jpg" />
+      </a>
+      <a href="menu_design.html">
+        <img src="img/menu_thumbnails/lacroix_thumbnail.jpg" />
+      </a>
+    </div>
+    <div class="spacer-md"></div>
+    <div
+      class="decoration-yellow-line"
+      style="position: relative; left: 50%; top: -2rem"
+    ></div>
+
+    <div id="heading-packaging" class="header-title title-font tight text-white center">Packaging</div>
+    <div class="logo-responsive-body">
+      <a href="oldskool.html">
+        <img src="img/oldskool/beer_cover.jpg" />
+      </a>
+      <a href="book_design.html">
+        <img src="img/book/PD-4.jpg" />
+      </a>
+    </div>
+    <div class="spacer-md"></div>
+    <div
+      class="decoration-yellow-line"
+      style="position: relative; top: -2rem"
+    ></div>
+
+    <div id="heading-digital" class="header-title title-font tight text-white center">Digital</div>
+    <div class="logo-responsive-body">
+      <a href="bubble.html">
+        <img src="img/bubble/bubble1.png" />
+      </a>
+      <a href="bubble.html">
+        <img src="img/LS_thumbnail.jpg" />
+      </a>
+    </div>
+    <div class="spacer-md"></div>
 
     <script src="js/navbar.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        function scrollToProjects({ isSmooth } = {}) {
-            console.log('about to scroll to projects!'); // TODO remove
-            const page2 = document.getElementById('page-2');
-            page2.scrollIntoView({ 
-                ...(isSmooth && { behavior: 'smooth' }),
-            });
-        }
+      // see https://stackoverflow.com/a/49924496
+      function scrollToElement(element, { isSmooth } = {}) {
+        const offset = 100; // nav-header is 6rem = 96px
+        // const offset = 0;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
 
-        function scrollToProjectsOnLoadIfNeeded() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const shouldScrollToProjects = urlParams.get('projects') === '';
-            if (shouldScrollToProjects) {
-                scrollToProjects();
-            }
-        }
+        window.scrollTo({
+          top: offsetPosition,
+          ...(isSmooth && { behavior: "smooth" }),
+        });
+      }
 
-        scrollToProjectsOnLoadIfNeeded();
+      function scrollToHeading(heading, { isSmooth } = {}) {
+        const headingElement = document.getElementById(`heading-${heading}`);
+        if (!headingElement) return;
+        scrollToElement(headingElement, { isSmooth });
+      }
+
+      function scrollToHeadingOnLoadIfNeeded() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const headingToScrollTo = urlParams.get("scrollTo");
+        if (headingToScrollTo) {
+          scrollToHeading(headingToScrollTo);
+        }
+      }
+
+      scrollToHeadingOnLoadIfNeeded();
     </script>
-</body>
-
+  </body>
 </html>

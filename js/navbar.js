@@ -49,7 +49,7 @@ function initNavbar() {
   navMenu.innerHTML = `
     <div class="nav-link-container">
       <a href="about.html" class="title-font">About</a>
-      <a href="index.html?projects" class="title-font">Projects</a>
+      <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
       <a href="contact.html" class="title-font">Contact</a>
     </div>
   `;

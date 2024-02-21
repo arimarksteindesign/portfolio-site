@@ -72,8 +72,8 @@ body {
   font-weight: 700;
 }
 
-.page-title {
-  margin: 3rem 0;
+.header-title {
+  margin: 2rem 0;
 }
 
 a:link {
@@ -131,6 +131,10 @@ a:active {
   text-align: center;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .spacer-xs {
   width: 100%;
   height: 1rem;
@@ -158,6 +162,14 @@ a:active {
 
 .mb-sm {
   margin-bottom: 1.5rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mt-md {
+  margin-top: 3rem;
 }
 
 
@@ -226,9 +238,9 @@ a:active {
 
 .decoration-yellow-line {
   background-color: #fec31d;
-  width: 100%;
-  height: 1.5rem;
-  position: absolute;
+  width: 50%;
+  height: .5rem;
+  /* position: absolute; */
 }
 
 .decoration-pink-arrow {
@@ -333,10 +345,11 @@ a:active {
   display: flex;
   flex-direction: column;
   align-content: center;
+  gap: 2rem;
 }
 
 .detail-text-block {
-  padding: 3rem;
+  padding: 0 3rem;
 }
 
 .back-footer {
@@ -345,7 +358,7 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-content: center;
+  align-items: baseline;
 }
 
 .back-footer > * {
@@ -357,8 +370,22 @@ a:active {
   /* see CSS tricks: https://css-tricks.com/snippets/css/css-triangle/ */
   width: 0;
   height: 0;
-  border-top: .8rem solid transparent;
-  border-bottom: .8rem solid transparent;
-  border-right: 1.36rem solid #ea0b7e;
-  margin-right: .75rem;
+  border-top: .45rem solid transparent;
+  border-bottom: .45rem solid transparent;
+  border-right: .75rem solid #ea0b7e;
+  margin-right: .15rem;
+}
+
+/* see https://stackoverflow.com/a/20130011 */
+.responsive-iframe {
+  position: relative;
+  padding-top: 56%;
+}
+
+.responsive-iframe > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
