@@ -68,8 +68,16 @@ body {
   line-height: 1.35rem;
 }
 
+.copy-font.semibold {
+  font-weight: 400;
+}
+
 .copy-font.bold {
   font-weight: 700;
+}
+
+.copy-font.text-lg {
+  font-size: 1.2rem;
 }
 
 .header-title {
@@ -105,18 +113,29 @@ a:active {
 
 .button {
   font-size: 1.25rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: fit-content;
-  padding: 1.5rem 1.25rem;
+  /* padding: 1.5rem 1.25rem; */
+  padding: 1rem .75rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border: 1px solid #fec31d;
-  border-radius: .25rem;
+  border-radius: .75rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #fec31d;
+}
+
+.button:hover > .button-label {
+  color: black;
 }
 
 .button-label {
+  color: #fec31d;
   text-align: center;
   line-height: 100%;
   vertical-align: middle;
@@ -181,7 +200,13 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+
+.main-heading-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-heading {
@@ -189,7 +214,19 @@ a:active {
   /* line-height: 3.8rem; */
 }
 
+.main-heading > * {
+  display: block;
+}
+
+.main-subtitle {
+  width: 18rem;
+}
+
 .view-work-button-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
   position: absolute;
   bottom: 3rem;
   left: 0;
@@ -224,7 +261,20 @@ a:active {
 	}
 }
 
-.project-link-container {
+.responsive-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 0 6rem;
+  gap: 2rem;
+}
+
+.responsive-grid > a > img {
+  width: 100%;
+}
+
+/* .project-link-container {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -234,11 +284,11 @@ a:active {
 
 .project-link {
   text-align: center;
-}
+} */
 
 .decoration-yellow-line {
   background-color: #fec31d;
-  width: 50%;
+  width: 100%;
   height: .5rem;
   /* position: absolute; */
 }
@@ -263,6 +313,11 @@ a:active {
 
 .contact-page-title {
   margin-top: 2rem;
+  font-size: 4rem;
+}
+
+.contact-page-title > * {
+  display: block;
 }
 
 .contact-page-subtitle {
@@ -272,6 +327,30 @@ a:active {
 .contact-page-description {
   padding: 1rem 3rem;
   font-size: 1.25rem;
+}
+
+.contact-icon-email {
+  content: url("../img/contact/email-2.png");
+}
+
+.contact-icon-ig {
+  content: url("../img/contact/ig.png");
+}
+
+.contact-icon-li {
+  content: url("../img/contact/li.png");
+}
+
+.button:hover > .contact-icon-email {
+  content: url("../img/contact/email-2_black.png");
+}
+
+.button:hover > .contact-icon-ig {
+  content: url("../img/contact/ig_black.png");
+}
+
+.button:hover > .contact-icon-li {
+  content: url("../img/contact/li_black.png");
 }
 
 .ari-photo-area {
@@ -288,36 +367,19 @@ a:active {
 }
 
 
-/* ----- logo page styles ----- */
-
-.logo-responsive-body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  padding: 0 6rem;
-  gap: 2rem;
-}
-
-.logo-responsive-body > a > img {
-  width: 100%;
-}
-
-
 /* ----- product page styles ----- */
 
-.product-responsive-body {
+/* .product-responsive-body {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
-  /* padding: 0 6rem; */
   gap: 2rem;
 }
 
 .product-responsive-body > a > img {
   width: 100%;
-}
+} */
 
 
 /* ----- menu page styles ----- */
@@ -338,18 +400,25 @@ a:active {
 
 /* ----- detail page styles ----- */
 
-.detail-responsive-body {
-  margin-top: 3rem;
+.responsive-body {
   width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-content: center;
   gap: 2rem;
+  padding: 0 2rem;
 }
 
 .detail-text-block {
   padding: 0 3rem;
+}
+
+.responsive-two-col {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 2rem;
 }
 
 .back-footer {
