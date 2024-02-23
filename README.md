@@ -1,14 +1,8 @@
 # Ari's Portfolio Site
 
 ## TO DO:
-- prevent scrolling when mobile navbar is open?
-- fix page title h-margins
 - detail page image descriptions
-- desktop: nav bar
-- min-width?
-
-### to be published
-- desktop: landing page text lines
+- menu buttons go to that menu on menu page
 
 ## improvements:
 - use comma for apostrophe on landing page main title?

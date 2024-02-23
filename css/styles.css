@@ -8,6 +8,7 @@ body {
   height: 100vh;
   /* don't use `100vw` because it doesn't take the width of the scrollbar into account! */
   width: 100%;
+  min-width: 300px;
 }
 
 * {
@@ -367,21 +368,6 @@ a:active {
 }
 
 
-/* ----- product page styles ----- */
-
-/* .product-responsive-body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  gap: 2rem;
-}
-
-.product-responsive-body > a > img {
-  width: 100%;
-} */
-
-
 /* ----- menu page styles ----- */
 
 .menu-responsive-body {
@@ -399,6 +385,10 @@ a:active {
 
 
 /* ----- detail page styles ----- */
+
+.page-title {
+  padding: 0 2rem;
+}
 
 .responsive-body {
   width: 100%;

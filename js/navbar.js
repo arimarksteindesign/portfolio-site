@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Expects a div with id `navbar` to exist in the document.
+ */
+
 let isNavbarExpanded = false;
 let navbarIcon;
 let navMenu;
@@ -20,51 +24,43 @@ function toggleNavbar() {
 }
 
 function initNavbar() {
-  // create social buttons
-  const socialButtonContainer = document.createElement('div');
-  socialButtonContainer.className = 'social-button-container';
+  const navbarInnerHtml = `
+    <div class="nav-header">
+      <div class="social-button-container">
+        <a href="https://www.instagram.com/arimarksteindesign/" class="social-button">
+          <img src="img/contact/ig.png" />
+        </a>
+        <a href="https://www.linkedin.com/in/arimarkstein" class="social-button">
+          <img src="img/contact/li.png" />
+        </a>
+      </div>
 
-  const instagramButtom = document.createElement('a');
-  instagramButtom.className = 'social-button';
-  instagramButtom.href = 'https://www.instagram.com/arimarksteindesign/';
-  instagramButtom.innerHTML = '<img src="img/contact/ig.png" />';
+      <div class="nav-icon" onclick="toggleNavbar()">
+        <span></span>
+      </div>
 
-  const linkedInButton = document.createElement('a');
-  linkedInButton.className = 'social-button';
-  linkedInButton.href = 'https://www.linkedin.com/in/arimarkstein';
-  linkedInButton.innerHTML = '<img src="img/contact/li.png" />';
+      <div class="nav-link-container">
+        <a href="about.html" class="title-font">About</a>
+        <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
+        <a href="contact.html" class="title-font">Contact</a>
+      </div>
+    </div>
 
-  socialButtonContainer.appendChild(instagramButtom);
-  socialButtonContainer.appendChild(linkedInButton);
-
-  // create menu button
-  navbarIcon = document.createElement('div');
-  navbarIcon.className = 'nav-icon';
-  navbarIcon.innerHTML = '<span></span>';
-  navbarIcon.addEventListener('click', toggleNavbar);
-
-  // create menu
-  navMenu = document.createElement('div');
-  navMenu.className = 'nav-menu animate bg-black';
-  navMenu.innerHTML = `
-    <div class="nav-link-container">
-      <a href="about.html" class="title-font">About</a>
-      <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
-      <a href="contact.html" class="title-font">Contact</a>
+    <div class="nav-menu animate bg-black">
+      <div class="nav-link-container">
+        <a href="about.html" class="title-font">About</a>
+        <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
+        <a href="contact.html" class="title-font">Contact</a>
+      </div>
     </div>
   `;
-
-  // compose navbar
-  const navHeader = document.createElement('div');
-  navHeader.className = 'nav-header';
-  navHeader.appendChild(socialButtonContainer);
-  navHeader.appendChild(navbarIcon);
   
   const targetElementId = 'navbar';
   const navbar = document.getElementById(targetElementId);
-  navbar.appendChild(navHeader);
-  navbar.appendChild(navMenu);
+  navbar.innerHTML = navbarInnerHtml;
 
+  navbarIcon = navbar.querySelector('.nav-icon');
+  navMenu = navbar.querySelector('.nav-menu');
 
   renderNavbar();
 }

@@ -6,6 +6,7 @@
   left: 0;
   right: 0;
   z-index: 100;
+  min-width: 300px;
 }
 
 /* convenience style for page bodies */
@@ -21,6 +22,11 @@
   justify-content: space-between;
   height: 6rem;
   background: black;
+}
+
+/* these will only appear on desktop (see media query below) */
+.nav-header > .nav-link-container {
+  display: none;
 }
 
 .social-button-container {
@@ -56,7 +62,7 @@
   height: calc(100vh - 6rem);
 }
 
-.nav-link-container {
+.nav-menu > .nav-link-container {
   /* height: 100vh; */
   /* again, subtract the height of the nav-header to v-center the elements */
   height: calc(100% - 6rem);
@@ -69,7 +75,7 @@
   /* margin-bottom: 6rem; */
 }
 
-.nav-link-container > a {
+.nav-menu > .nav-link-container > a {
   text-align: center;
   color: #fec31d;
 }
@@ -118,4 +124,30 @@
   transform: scaleX(0);
   -moz-transform: scaleX(0);
   -webkit-transform: scaleX(0);
+}
+
+
+/* desktop navbar styles */
+/* hide the social buttons and menu, just display the navlinks */
+@media screen and (min-width: 900px) {
+
+  .social-button-container,
+  .nav-icon,
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-header > .nav-link-container {
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-header > .nav-link-container > a {
+    color: #fec31d;
+    font-size: 1.2rem;
+  }
+
 }
