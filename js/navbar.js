@@ -27,10 +27,10 @@ function initNavbar() {
   const navbarInnerHtml = `
     <div class="nav-header">
       <div class="social-button-container">
-        <a href="https://www.instagram.com/arimarksteindesign/" class="social-button">
+        <a target="_blank" href="https://www.instagram.com/arimarksteindesign/" class="social-button">
           <img src="img/contact/ig.png" />
         </a>
-        <a href="https://www.linkedin.com/in/arimarkstein" class="social-button">
+        <a target="_blank" href="https://www.linkedin.com/in/arimarkstein" class="social-button">
           <img src="img/contact/li.png" />
         </a>
       </div>

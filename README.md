@@ -2,7 +2,6 @@
 
 ## TO DO:
 - detail page image descriptions
-- menu buttons go to that menu on menu page
 
 ## improvements:
 - use comma for apostrophe on landing page main title?

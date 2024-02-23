@@ -83,16 +83,16 @@
     <div class="responsive-body">
       <div id="heading-menus" class="header-title title-font tight text-white center">Menus</div>
       <div class="responsive-grid">
-        <a href="menu_design.html">
+        <a href="menu_design.html?scrollTo=ogawa">
           <img src="img/menu_thumbnails/ogawa_thumbnail.jpg" />
         </a>
-        <a href="menu_design.html">
+        <a href="menu_design.html?scrollTo=mawn">
           <img src="img/menu_thumbnails/mawn_thumbnail.jpg" />
         </a>
-        <a href="menu_design.html">
+        <a href="menu_design.html?scrollTo=emmett">
           <img src="img/menu_thumbnails/emmett_thumbnail.jpg" />
         </a>
-        <a href="menu_design.html">
+        <a href="menu_design.html?scrollTo=lacroix">
           <img src="img/menu_thumbnails/lacroix_thumbnail.jpg" />
         </a>
       </div>
@@ -143,7 +143,6 @@
       // see https://stackoverflow.com/a/49924496
       function scrollToElement(element, { isSmooth } = {}) {
         const offset = 100; // nav-header is 6rem = 96px
-        // const offset = 0;
         const bodyRect = document.body.getBoundingClientRect().top;
         const elementRect = element.getBoundingClientRect().top;
         const elementPosition = elementRect - bodyRect;
