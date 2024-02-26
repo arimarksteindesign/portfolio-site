@@ -40,16 +40,16 @@ function initNavbar() {
       </div>
 
       <div class="nav-link-container">
-        <a href="about.html" class="title-font">About</a>
         <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
+        <a href="about.html" class="title-font">About</a>
         <a href="contact.html" class="title-font">Contact</a>
       </div>
     </div>
 
     <div class="nav-menu animate bg-black">
       <div class="nav-link-container">
-        <a href="about.html" class="title-font">About</a>
         <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
+        <a href="about.html" class="title-font">About</a>
         <a href="contact.html" class="title-font">Contact</a>
       </div>
     </div>

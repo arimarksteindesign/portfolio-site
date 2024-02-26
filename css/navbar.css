@@ -12,7 +12,7 @@
 /* convenience style for page bodies */
 .nav-header-spacer {
   width: 100%;
-  height: 6rem;
+  height: 4rem;
 }
 
 .nav-header {
@@ -20,7 +20,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
+  height: 4rem;
   background: black;
 }
 
@@ -30,13 +30,13 @@
 }
 
 .social-button-container {
-  padding-left: 2rem;
+  margin-left: 1rem;
   display: flex;
-  column-gap: 1.5rem;
+  column-gap: 1rem;
 }
 
 .social-button, .social-button > img {
-  width: 2.5rem;
+  width: 2rem;
 }
 
 .social-button > img {
@@ -59,34 +59,31 @@
 
 .nav-menu.open {
   /* subtract the height of the nav-header */
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 4rem);
 }
 
 .nav-menu > .nav-link-container {
-  /* height: 100vh; */
   /* again, subtract the height of the nav-header to v-center the elements */
-  height: calc(100% - 6rem);
+  height: calc(100% - 4rem);
   display: flex;
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
   row-gap: 6rem;
   color: white;
-  /* margin-bottom: 6rem; */
 }
 
 .nav-menu > .nav-link-container > a {
   text-align: center;
   color: #fec31d;
+  font-size: 2rem;
 }
 
 .nav-icon {
   cursor: pointer;
   display: inline-block;
-  margin-right: 1.75rem;
-  /* position: relative;
-  top: 2px; */
-  width: 3rem;
+  margin-right: 1rem;
+  width: 2rem;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -95,29 +92,27 @@
 .nav-icon:after,
 .nav-icon:before,
 .nav-icon span {
-  margin: .5rem auto;
+  margin: .333rem auto;
   display: block;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
   content: '';
-  height: .5rem;
-  width: 3rem;
+  height: .333rem;
+  width: 2rem;
   background-color: #fec31d;
 }
 
 .nav-icon.nav-icon--open:before {
-  width: 3rem;
-  transform: translateY(1rem) rotate(135deg);
-  -webkit-transform: translateY(1rem) rotate(135deg);
-  -moz-transform: translateY(1rem) rotate(135deg);
+  transform: translateY(.666rem) rotate(135deg);
+  -webkit-transform: translateY(.666rem) rotate(135deg);
+  -moz-transform: translateY(.666rem) rotate(135deg);
 }
 
 .nav-icon.nav-icon--open:after {
-  width: 3rem;
-  transform: translateY(-1rem) rotate(-135deg);
-  -moz-transform: translateY(-1rem) rotate(-135deg);
-  -webkit-transform: translateY(-1rem) rotate(-135deg);
+  transform: translateY(-.666rem) rotate(-135deg);
+  -moz-transform: translateY(-.666rem) rotate(-135deg);
+  -webkit-transform: translateY(-.666rem) rotate(-135deg);
 }
 
 .nav-icon.nav-icon--open span {
@@ -144,6 +139,8 @@
     justify-content: space-between;
     width: 100%;
   }
+  /* if you want to center the middle element, start here: */
+  /* https://stackoverflow.com/questions/32378953/keep-the-middle-item-centered-when-side-items-have-different-widths */
 
   .nav-header > .nav-link-container > a {
     color: #fec31d;

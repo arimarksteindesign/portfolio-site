@@ -1,5 +1,9 @@
 @media screen and (min-width: 550px) {
 
+  .button-label {
+    font-size: 1.25rem;
+  }
+
   .responsive-grid,
   .responsive-two-col
   {
@@ -22,6 +26,10 @@
     display: inline;
   }
   
+  .section-heading {
+    font-size: 2.5rem;
+  }
+  
 }
 
 @media screen and (min-width: 900px) {
@@ -33,6 +41,40 @@
   .main-subtitle {
     width: 34rem;
     font-size: 1.3rem;
+  }
+
+  .view-work-button-area {
+    margin-top: 4rem;
+  }
+
+  .about-page-body {
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about-decoration {
+    display: block;
+  }
+
+  .ari-photo-area {
+    display: block;
+    overflow: hidden;
+    line-height: 0;
+    padding-right: 4rem;
+  }
+  
+  .ari-photo {
+    position: relative;
+    height: 500px;
+    z-index: 10;
+  }
+
+  .contact-page-title {
+    margin-top: 4rem;
+    font-size: 5rem;
   }
 
 }
