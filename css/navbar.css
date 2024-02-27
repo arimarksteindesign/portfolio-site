@@ -132,19 +132,26 @@
     display: none;
   }
 
+  .nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .nav-header > .nav-link-container {
-    padding: 0 6rem;
+    margin: 0 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-width: 900px;
   }
   /* if you want to center the middle element, start here: */
   /* https://stackoverflow.com/questions/32378953/keep-the-middle-item-centered-when-side-items-have-different-widths */
 
   .nav-header > .nav-link-container > a {
     color: #fec31d;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
 }

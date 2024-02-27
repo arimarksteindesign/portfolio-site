@@ -139,7 +139,7 @@ a:active {
 
 .button-label.nudge {
   position: relative; 
-  top: 0.15rem;
+  top: 0.075rem;
 }
 
 
@@ -277,6 +277,8 @@ a:active {
   align-content: center;
   padding: 0 3rem;
   gap: 1.5rem;
+  /* add a little space for the hover style */
+  margin-bottom: 1rem;
 }
 
 .responsive-grid > a {
@@ -287,6 +289,14 @@ a:active {
 .responsive-grid > a > img {
   width: 100%;
   border-radius: 1rem;
+  transition: all;
+  transition-duration: .15s;
+}
+
+.responsive-grid > a > img:hover {
+  box-shadow:
+    0 0 0 .2rem black,
+    0 0 0 .4rem #fec31d;
 }
 
 .decoration-yellow-line {
@@ -321,7 +331,8 @@ a:active {
 .about-page-description {
   padding: 1rem 3rem;
   margin: 0 auto;
-  max-width: 650px;
+  /* hard-coded max to best lay out the copy text */
+  max-width: 41rem;
 }
 
 .about-page-subtitle {
@@ -376,7 +387,6 @@ a:active {
   display: flex;
   flex-direction: column;
   align-content: center;
-  /* padding: 0 6rem; */
   gap: 2rem;
 }
 
