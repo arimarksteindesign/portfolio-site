@@ -1,10 +1,6 @@
 # Ari's Portfolio Site
 
-## TO DO:
-- detail page image descriptions
-
 ## improvements:
-- favicon
 - use comma for apostrophe on landing page main title?
 - downres images for faster load times
 - remove unneeded images/rename images
