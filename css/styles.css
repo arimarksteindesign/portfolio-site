@@ -56,6 +56,11 @@ body {
   line-height: .635;
 }
 
+.title-font.nudge {
+  position: relative; 
+  top: 0.075rem;
+}
+
 .flush {
   margin-bottom: -.25rem;
 }
@@ -135,11 +140,6 @@ a:active {
   vertical-align: middle;
   font-size: 1rem;
   /* margin: 0 .5rem; */
-}
-
-.button-label.nudge {
-  position: relative; 
-  top: 0.075rem;
 }
 
 
@@ -420,6 +420,18 @@ a:active {
   flex-direction: column;
   align-content: center;
   gap: 2rem;
+}
+
+.detail-image img {
+  position: relative;
+  width: 100%;
+}
+
+.image-caption-left,
+.image-caption-right {
+  width: 100%;
+  font-size: .8rem;
+  text-align: center;
 }
 
 .back-footer {
