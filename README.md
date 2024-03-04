@@ -1,7 +1,6 @@
 # Ari's Portfolio Site
 
 ## improvements:
-- scroll bar styles
 - "packaging" title on landing page overflow - add `&shy;`?
 - use comma for apostrophe on landing page main title?
 - downres images for faster load times
