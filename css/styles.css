@@ -8,7 +8,7 @@ body {
   height: 100vh;
   /* don't use `100vw` because it doesn't take the width of the scrollbar into account! */
   width: 100%;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 * {
@@ -443,11 +443,7 @@ a:active {
   align-items: baseline;
 }
 
-.back-footer > * {
-  margin: auto 0;
-}
-
-.back-footer > .arrow {
+.back-footer .arrow {
   display: inline-block;
   /* see CSS tricks: https://css-tricks.com/snippets/css/css-triangle/ */
   width: 0;
