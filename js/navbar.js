@@ -40,7 +40,7 @@ function initNavbar() {
       </div>
 
       <div class="nav-link-container">
-        <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
+        <a href="index.html?scrollTo=brands" class="title-font">Projects</a>
         <a href="about.html" class="title-font">About</a>
         <a href="contact.html" class="title-font">Contact</a>
       </div>
@@ -48,7 +48,7 @@ function initNavbar() {
 
     <div class="nav-menu animate bg-black">
       <div class="nav-link-container">
-        <a href="index.html?scrollTo=logos" class="title-font">Projects</a>
+        <a href="index.html?scrollTo=brands" class="title-font">Projects</a>
         <a href="about.html" class="title-font">About</a>
         <a href="contact.html" class="title-font">Contact</a>
       </div>
