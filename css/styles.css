@@ -398,6 +398,10 @@ a:active {
   content: url("../img/contact/li.png");
 }
 
+.contact-icon-download {
+  content: url("../img/contact/download.png");
+}
+
 .button:hover > .contact-icon-email {
   content: url("../img/contact/email-2_black.png");
 }
@@ -408,6 +412,10 @@ a:active {
 
 .button:hover > .contact-icon-li {
   content: url("../img/contact/li_black.png");
+}
+
+.button:hover > .contact-icon-download {
+  content: url("../img/contact/download_black.png");
 }
 
 /* hide on small screens */
