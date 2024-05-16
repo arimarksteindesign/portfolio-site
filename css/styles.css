@@ -314,7 +314,7 @@ a:active {
   flex-direction: column;
   align-content: center;
   padding: 0 3rem;
-  gap: 1.5rem;
+  gap: 2.5rem;
   /* add a little space for the hover style */
   margin-bottom: 1rem;
 }
